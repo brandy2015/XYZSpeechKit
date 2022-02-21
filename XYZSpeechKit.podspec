@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "XYZSpeechKit"
-  s.version      = "1.0.4"
+  s.version      = "1.0.5"
   s.summary      = "持续升级"
 
   s.description  = <<-DESC
@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
   s.author             = { "Brandy" => "" }
   s.authors            = { "Brandy" => "zhangqianbrandy2012@gmail.com" }
   s.platform     = :ios, "13.0"
-  s.source       = { :git => "https://github.com/brandy2015/XYZSpeechKit.git", :tag => "1.0.4"}
+  s.source       = { :git => "https://github.com/brandy2015/XYZSpeechKit.git", :tag => "1.0.5"}
   s.source_files = "XYZSpeechKit/Classes/*"
  
  

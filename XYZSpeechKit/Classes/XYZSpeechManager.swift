@@ -11,24 +11,24 @@ import Speech
 
 public class XYZSpeechManager: NSObject {
 
-    enum XYZSpeechType: Int {
+    public enum XYZSpeechType: Int {
         case start
         case stop
         case finished
         case authDenied
     }
 
-    typealias XYZSpeechBlock = (_ speechType: XYZSpeechType, _ finalText: String?) -> Void
+    public typealias XYZSpeechBlock = (_ speechType: XYZSpeechType, _ finalText: String?) -> Void
      
     
-    private var parentVc: UIViewController!
-    private var speechTask: SFSpeechRecognitionTask?
+    public var parentVc: UIViewController!
+    public var speechTask: SFSpeechRecognitionTask?
     // 声音处理器
-    private var speechRecognizer: SFSpeechRecognizer?
+    public var speechRecognizer: SFSpeechRecognizer?
     
-    static let share = XYZSpeechManager()
+    public static let share = XYZSpeechManager()
     
-    private var block: XYZSpeechBlock?
+    public  var block: XYZSpeechBlock?
     
     // 语音识别器
     lazy var recognitionRequest: SFSpeechAudioBufferRecognitionRequest = {
@@ -38,7 +38,7 @@ public class XYZSpeechManager: NSObject {
     
  
     
-    lazy var audioEngine: AVAudioEngine = {
+    public lazy var audioEngine: AVAudioEngine = {
         let audioEngine = AVAudioEngine()
         audioEngine.inputNode.installTap(onBus: 0, bufferSize: 1024, format: audioEngine.inputNode.outputFormat(forBus: 0)) { (buffer, audioTime) in
             // 为语音识别请求对象添加一个AudioPCMBuffer，来获取声音数据
@@ -48,7 +48,7 @@ public class XYZSpeechManager: NSObject {
     }()
     
     
-    func XYZ_startSpeech(speechVc: UIViewController, langugeSimple: String, speechBlock: @escaping XYZSpeechBlock) {
+    public func XYZ_startSpeech(speechVc: UIViewController, langugeSimple: String, speechBlock: @escaping XYZSpeechBlock) {
         parentVc = speechVc
         block = speechBlock
         
@@ -94,7 +94,7 @@ public class XYZSpeechManager: NSObject {
 extension XYZSpeechManager: SFSpeechRecognitionTaskDelegate {
     
     //判断语音识别权限
-    private func XYZ_checkRecognizerAuthorization(recongStatus: @escaping (_ resType: Bool) -> Void) {
+    public func XYZ_checkRecognizerAuthorization(recongStatus: @escaping (_ resType: Bool) -> Void) {
         let authorStatus = SFSpeechRecognizer.authorizationStatus()
         if authorStatus == .authorized {
             recongStatus(true)
@@ -112,7 +112,7 @@ extension XYZSpeechManager: SFSpeechRecognitionTaskDelegate {
     }
     
     //检测麦克风
-    private func XYZ_checkmicroPhoneAuthorization(authoStatus: @escaping (_ resultStatus: Bool) -> Void) {
+    public func XYZ_checkmicroPhoneAuthorization(authoStatus: @escaping (_ resultStatus: Bool) -> Void) {
         let microPhoneStatus = AVCaptureDevice.authorizationStatus(for: .audio)
 
         if microPhoneStatus == .authorized {
@@ -131,7 +131,7 @@ extension XYZSpeechManager: SFSpeechRecognitionTaskDelegate {
     }
     
     //开始进行
-    private func XYZ_startDictating() {
+    public func XYZ_startDictating() {
         do {
             try audioEngine.start()
             speechTask = speechRecognizer!.recognitionTask(with: recognitionRequest) { (speechResult, error) in
@@ -148,20 +148,20 @@ extension XYZSpeechManager: SFSpeechRecognitionTaskDelegate {
     }
     
     // 停止声音处理器，停止语音识别请求进程
-    func XYZ_stopDictating() {
+    public func XYZ_stopDictating() {
         XYZ_setCallBack(type: .stop, text: nil)
         audioEngine.stop()
         recognitionRequest.endAudio()
         speechTask?.cancel()
     }
     
-    private func XYZ_setCallBack(type: XYZSpeechType, text: String?) {
+    public func XYZ_setCallBack(type: XYZSpeechType, text: String?) {
         if block != nil {
             block!(type, text)
         }
     }
     
-    private func showAlert(_ message: String) {
+    public func showAlert(_ message: String) {
         DispatchQueue.main.async {
             let alertVC = UIAlertController(title: nil, message: message, preferredStyle: .alert)
             let firstAction = UIAlertAction(title: "知道了", style: .default, handler: {(action) in
