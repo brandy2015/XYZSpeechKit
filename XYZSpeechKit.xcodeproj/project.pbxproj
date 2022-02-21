@@ -13,6 +13,8 @@
 		D68CB17A27C3732A005602BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68CB17827C3732A005602BB /* Main.storyboard */; };
 		D68CB17C27C3732B005602BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D68CB17B27C3732B005602BB /* Assets.xcassets */; };
 		D68CB17F27C3732B005602BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68CB17D27C3732B005602BB /* LaunchScreen.storyboard */; };
+		D68CB18727C37454005602BB /* XYZSpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CB18627C37454005602BB /* XYZSpeechManager.swift */; };
+		D68CB18A27C3834D005602BB /* XYZSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CB18927C3834D005602BB /* XYZSpeech.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		D68CB17B27C3732B005602BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D68CB17E27C3732B005602BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D68CB18027C3732B005602BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D68CB18627C37454005602BB /* XYZSpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYZSpeechManager.swift; sourceTree = "<group>"; };
+		D68CB18827C38319005602BB /* XYZSpeechKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XYZSpeechKit.entitlements; sourceTree = "<group>"; };
+		D68CB18927C3834D005602BB /* XYZSpeech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYZSpeech.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +61,12 @@
 		D68CB17127C3732A005602BB /* XYZSpeechKit */ = {
 			isa = PBXGroup;
 			children = (
+				D68CB18827C38319005602BB /* XYZSpeechKit.entitlements */,
 				D68CB17227C3732A005602BB /* AppDelegate.swift */,
 				D68CB17427C3732A005602BB /* SceneDelegate.swift */,
 				D68CB17627C3732A005602BB /* ViewController.swift */,
+				D68CB18627C37454005602BB /* XYZSpeechManager.swift */,
+				D68CB18927C3834D005602BB /* XYZSpeech.swift */,
 				D68CB17827C3732A005602BB /* Main.storyboard */,
 				D68CB17B27C3732B005602BB /* Assets.xcassets */,
 				D68CB17D27C3732B005602BB /* LaunchScreen.storyboard */,
@@ -139,7 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D68CB17727C3732A005602BB /* ViewController.swift in Sources */,
+				D68CB18A27C3834D005602BB /* XYZSpeech.swift in Sources */,
 				D68CB17327C3732A005602BB /* AppDelegate.swift in Sources */,
+				D68CB18727C37454005602BB /* XYZSpeechManager.swift in Sources */,
 				D68CB17527C3732A005602BB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +297,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = XYZSpeechKit/XYZSpeechKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9GZYHL8TWB;
@@ -297,6 +308,8 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +317,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xyztech.XYZSpeechKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = XYZSpeechKit/XYZSpeechKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9GZYHL8TWB;
@@ -325,6 +340,8 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,6 +349,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xyztech.XYZSpeechKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
