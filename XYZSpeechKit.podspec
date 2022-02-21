@@ -16,8 +16,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "XYZSpeechKit"
-  spec.version      = "0.0.1"
-  spec.summary      = "A short description of XYZSpeechKit."
+  spec.version      = "1.0.2"
+  spec.summary      = "语音调用库"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,9 +25,11 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+
+				语音识别库
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/XYZSpeechKit"
+  spec.homepage     = "https://github.com/brandy2015/XYZSpeechKit"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,19 +40,9 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
-
-
-  # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the authors of the library, with email addresses. Email addresses
-  #  of the authors are extracted from the SCM log. E.g. $ git log. CocoaPods also
-  #  accepts just a name if you'd rather not provide an email address.
-  #
-  #  Specify a social_media_url where others can refer to, for example a twitter
-  #  profile URL.
-  #
+  spec.license      = "MIT"
+  s.swift_version = '5.0'
+  
 
   spec.author             = { "XYZTech" => "342994630@qq.com" }
   # Or just: spec.author    = "XYZTech"
@@ -64,11 +56,11 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+   spec.platform     = :ios, "13.0"
 
   #  When using multiple platforms
-  # spec.ios.deployment_target = "5.0"
-  # spec.osx.deployment_target = "10.7"
+   spec.ios.deployment_target = "13.0"
+   spec.osx.deployment_target = "11.0"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
 
@@ -78,9 +70,8 @@ Pod::Spec.new do |spec|
   #  Specify the location from where the source should be retrieved.
   #  Supports git, hg, bzr, svn and HTTP.
   #
-
-  spec.source       = { :git => "http://EXAMPLE/XYZSpeechKit.git", :tag => "#{spec.version}" }
-
+ 
+	spec.source      = { :git => "https://github.com/brandy2015/XYZSpeechKit.git", :tag => "1.0.2"}
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -90,7 +81,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  spec.source_files  = "Classes", "Classes/**/*.{h,m}", "Classes/*"
   spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"

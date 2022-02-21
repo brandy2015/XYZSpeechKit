@@ -65,14 +65,22 @@
 				D68CB17227C3732A005602BB /* AppDelegate.swift */,
 				D68CB17427C3732A005602BB /* SceneDelegate.swift */,
 				D68CB17627C3732A005602BB /* ViewController.swift */,
-				D68CB18627C37454005602BB /* XYZSpeechManager.swift */,
-				D68CB18927C3834D005602BB /* XYZSpeech.swift */,
+				D68CB18B27C38821005602BB /* Classes */,
 				D68CB17827C3732A005602BB /* Main.storyboard */,
 				D68CB17B27C3732B005602BB /* Assets.xcassets */,
 				D68CB17D27C3732B005602BB /* LaunchScreen.storyboard */,
 				D68CB18027C3732B005602BB /* Info.plist */,
 			);
 			path = XYZSpeechKit;
+			sourceTree = "<group>";
+		};
+		D68CB18B27C38821005602BB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D68CB18627C37454005602BB /* XYZSpeechManager.swift */,
+				D68CB18927C3834D005602BB /* XYZSpeech.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
