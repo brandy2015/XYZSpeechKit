@@ -15,6 +15,8 @@
 		D68CB17F27C3732B005602BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68CB17D27C3732B005602BB /* LaunchScreen.storyboard */; };
 		D68CB18727C37454005602BB /* XYZSpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CB18627C37454005602BB /* XYZSpeechManager.swift */; };
 		D68CB18A27C3834D005602BB /* XYZSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CB18927C3834D005602BB /* XYZSpeech.swift */; };
+		D6ABA85E27C3B7DB00416F70 /* XYZTalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABA85D27C3B7DB00416F70 /* XYZTalk.swift */; };
+		D6ABA86027C3B86300416F70 /* TestVCx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABA85F27C3B86300416F70 /* TestVCx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		D68CB18627C37454005602BB /* XYZSpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYZSpeechManager.swift; sourceTree = "<group>"; };
 		D68CB18827C38319005602BB /* XYZSpeechKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XYZSpeechKit.entitlements; sourceTree = "<group>"; };
 		D68CB18927C3834D005602BB /* XYZSpeech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYZSpeech.swift; sourceTree = "<group>"; };
+		D6ABA85D27C3B7DB00416F70 /* XYZTalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYZTalk.swift; sourceTree = "<group>"; };
+		D6ABA85F27C3B86300416F70 /* TestVCx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCx.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 				D68CB17227C3732A005602BB /* AppDelegate.swift */,
 				D68CB17427C3732A005602BB /* SceneDelegate.swift */,
 				D68CB17627C3732A005602BB /* ViewController.swift */,
+				D6ABA85F27C3B86300416F70 /* TestVCx.swift */,
 				D68CB18B27C38821005602BB /* Classes */,
 				D68CB17827C3732A005602BB /* Main.storyboard */,
 				D68CB17B27C3732B005602BB /* Assets.xcassets */,
@@ -79,6 +84,7 @@
 			children = (
 				D68CB18627C37454005602BB /* XYZSpeechManager.swift */,
 				D68CB18927C3834D005602BB /* XYZSpeech.swift */,
+				D6ABA85D27C3B7DB00416F70 /* XYZTalk.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -155,10 +161,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D68CB17727C3732A005602BB /* ViewController.swift in Sources */,
+				D6ABA85E27C3B7DB00416F70 /* XYZTalk.swift in Sources */,
 				D68CB18A27C3834D005602BB /* XYZSpeech.swift in Sources */,
 				D68CB17327C3732A005602BB /* AppDelegate.swift in Sources */,
 				D68CB18727C37454005602BB /* XYZSpeechManager.swift in Sources */,
 				D68CB17527C3732A005602BB /* SceneDelegate.swift in Sources */,
+				D6ABA86027C3B86300416F70 /* TestVCx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
